@@ -1,6 +1,6 @@
 package com.todoroo.andlib;
 
-import static com.todoroo.andlib.Constants.SPACE;
+import static com.todoroo.andlib.SqlConstants.SPACE;
 
 import java.util.HashMap;
 import java.util.Map;

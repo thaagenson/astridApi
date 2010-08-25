@@ -1,15 +1,15 @@
 package com.todoroo.andlib;
 
-import static com.todoroo.andlib.Constants.ALL;
-import static com.todoroo.andlib.Constants.COMMA;
-import static com.todoroo.andlib.Constants.FROM;
-import static com.todoroo.andlib.Constants.GROUP_BY;
-import static com.todoroo.andlib.Constants.LEFT_PARENTHESIS;
-import static com.todoroo.andlib.Constants.ORDER_BY;
-import static com.todoroo.andlib.Constants.RIGHT_PARENTHESIS;
-import static com.todoroo.andlib.Constants.SELECT;
-import static com.todoroo.andlib.Constants.SPACE;
-import static com.todoroo.andlib.Constants.WHERE;
+import static com.todoroo.andlib.SqlConstants.ALL;
+import static com.todoroo.andlib.SqlConstants.COMMA;
+import static com.todoroo.andlib.SqlConstants.FROM;
+import static com.todoroo.andlib.SqlConstants.GROUP_BY;
+import static com.todoroo.andlib.SqlConstants.LEFT_PARENTHESIS;
+import static com.todoroo.andlib.SqlConstants.ORDER_BY;
+import static com.todoroo.andlib.SqlConstants.RIGHT_PARENTHESIS;
+import static com.todoroo.andlib.SqlConstants.SELECT;
+import static com.todoroo.andlib.SqlConstants.SPACE;
+import static com.todoroo.andlib.SqlConstants.WHERE;
 import static com.todoroo.andlib.SqlTable.table;
 import static java.util.Arrays.asList;
 
@@ -91,13 +91,13 @@ public final class Query {
         visitSelectClause(sql);
         visitFromClause(sql);
 
+        visitJoinClause(sql);
         if(queryTemplate == null) {
-            visitJoinClause(sql);
             visitWhereClause(sql);
             visitGroupByClause(sql);
             visitOrderByClause(sql);
         } else {
-            if(joins.size() > 0 || groupBies.size() > 0 || orders.size() > 0 ||
+            if(groupBies.size() > 0 || orders.size() > 0 ||
                     havings.size() > 0)
                 throw new IllegalStateException("Can't have extras AND query template"); //$NON-NLS-1$
             sql.append(queryTemplate);

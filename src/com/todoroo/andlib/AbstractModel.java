@@ -154,7 +154,7 @@ public abstract class AbstractModel implements Parcelable {
         if(setValues != null && setValues.containsKey(property.name))
             value = setValues.get(property.name);
 
-        else if(values != null && values.containsKey(property.name) && (values.get(property.name) != null))
+        else if(values != null && values.containsKey(property.name))
             value = values.get(property.name);
 
         else if(getDefaultValues().containsKey(property.name))
@@ -169,8 +169,10 @@ public abstract class AbstractModel implements Parcelable {
             return (TYPE) Long.valueOf((String)value);
         else if(value instanceof String && property instanceof IntegerProperty)
             return (TYPE) Integer.valueOf((String)value);
-        if(value instanceof String && property instanceof DoubleProperty)
+        else if(value instanceof String && property instanceof DoubleProperty)
             return (TYPE) Double.valueOf((String)value);
+        else if(value instanceof Integer && property instanceof LongProperty)
+            return (TYPE) Long.valueOf(((Number)value).longValue());
         return (TYPE) value;
     }
 
@@ -277,9 +279,8 @@ public abstract class AbstractModel implements Parcelable {
      */
     public synchronized <TYPE> void mergeWith(ContentValues other) {
         if (setValues == null)
-            setValues = other;
-        else
-            setValues.putAll(other);
+            setValues = new ContentValues();
+        setValues.putAll(other);
     }
 
     /**
@@ -336,7 +337,12 @@ public abstract class AbstractModel implements Parcelable {
 
         public synchronized void save(Property<?> property, ContentValues newStore, Object value) {
             this.store = newStore;
-            property.accept(this, value);
+
+            // we don't allow null values, as they indicate unset properties
+            // when the database was written
+
+            if(value != null)
+                property.accept(this, value);
         }
 
         public Void visitDouble(Property<Double> property, Object value) {

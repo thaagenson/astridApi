@@ -1,6 +1,6 @@
 package com.todoroo.andlib;
 
-import static com.todoroo.andlib.Constants.SPACE;
+import static com.todoroo.andlib.SqlConstants.SPACE;
 
 public class Order {
     private final Object expression;

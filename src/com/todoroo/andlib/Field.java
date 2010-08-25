@@ -1,11 +1,11 @@
 package com.todoroo.andlib;
 
-import static com.todoroo.andlib.Constants.AND;
-import static com.todoroo.andlib.Constants.BETWEEN;
-import static com.todoroo.andlib.Constants.COMMA;
-import static com.todoroo.andlib.Constants.LEFT_PARENTHESIS;
-import static com.todoroo.andlib.Constants.RIGHT_PARENTHESIS;
-import static com.todoroo.andlib.Constants.SPACE;
+import static com.todoroo.andlib.SqlConstants.AND;
+import static com.todoroo.andlib.SqlConstants.BETWEEN;
+import static com.todoroo.andlib.SqlConstants.COMMA;
+import static com.todoroo.andlib.SqlConstants.LEFT_PARENTHESIS;
+import static com.todoroo.andlib.SqlConstants.RIGHT_PARENTHESIS;
+import static com.todoroo.andlib.SqlConstants.SPACE;
 
 public class Field extends DBObject<Field> {
 
@@ -37,6 +37,10 @@ public class Field extends DBObject<Field> {
         return UnaryCriterion.lt(this, value);
     }
 
+    public Criterion lte(final Object value) {
+        return UnaryCriterion.lte(this, value);
+    }
+
     public Criterion isNull() {
         return UnaryCriterion.isNull(this);
     }
@@ -60,6 +64,11 @@ public class Field extends DBObject<Field> {
     public Criterion like(final String value) {
         return UnaryCriterion.like(this, value);
     }
+
+    public Criterion like(String value, String escape) {
+        return UnaryCriterion.like(this, value, escape);
+    }
+
 
     public <T> Criterion in(final T... value) {
         final Field field = this;

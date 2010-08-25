@@ -1,6 +1,6 @@
 package com.todoroo.andlib;
 
-import static com.todoroo.andlib.Constants.SPACE;
+import static com.todoroo.andlib.SqlConstants.SPACE;
 
 public class UnaryCriterion extends Criterion {
     protected final Field expression;
@@ -48,7 +48,7 @@ public class UnaryCriterion extends Criterion {
      */
     @SuppressWarnings("nls")
     public static String sanitize(String input) {
-        return input.replace("\\", "\\\\").replace("'", "\\'");
+        return input.replace("'", "''");
     }
 
     public static Criterion neq(Field field, Object value) {
@@ -61,6 +61,10 @@ public class UnaryCriterion extends Criterion {
 
     public static Criterion lt(Field field, Object value) {
         return new UnaryCriterion(field, Operator.lt, value);
+    }
+
+    public static Criterion lte(Field field, Object value) {
+        return new UnaryCriterion(field, Operator.lte, value);
     }
 
     public static Criterion isNull(Field field) {
@@ -86,6 +90,21 @@ public class UnaryCriterion extends Criterion {
             @Override
             protected void populateOperator(StringBuilder sb) {
                 sb.append(SPACE).append(operator).append(SPACE);
+            }
+        };
+    }
+
+    public static Criterion like(Field field, String value, final String escape) {
+        return new UnaryCriterion(field, Operator.like, value) {
+            @Override
+            protected void populateOperator(StringBuilder sb) {
+                sb.append(SPACE).append(operator).append(SPACE);
+            }
+            @SuppressWarnings("nls")
+            @Override
+            protected void afterPopulateOperator(StringBuilder sb) {
+                super.afterPopulateOperator(sb);
+                sb.append(SPACE).append("ESCAPE").append(" '").append(sanitize(escape)).append("'");
             }
         };
     }

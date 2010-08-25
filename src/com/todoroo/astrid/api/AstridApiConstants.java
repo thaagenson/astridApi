@@ -17,7 +17,7 @@ public class AstridApiConstants {
     // --- General Constants
 
     /**
-     * Astrid application package name
+     * Astrid broadcast base package name
      */
     public static final String PACKAGE = "com.todoroo.astrid";
 
@@ -34,9 +34,9 @@ public class AstridApiConstants {
     // --- Content Provider
 
     /**
-     * URI to append to base content URI for making groupby queries
+     * URI to append to base content URI for making group-by queries
      */
-    public static final String GROUP_BY_URI = "groupby/";
+    public static final String GROUP_BY_URI = "/groupby/";
 
     // --- Broadcast Extras
 
@@ -69,6 +69,11 @@ public class AstridApiConstants {
      * Extras name for new task due date
      */
     public static final String EXTRAS_NEW_DUE_DATE = "newDueDate";
+
+    /**
+     * Extras name for sync provider name
+     */
+    public static final String EXTRAS_NAME = "name";
 
     // --- Add-ons API
 
@@ -132,6 +137,21 @@ public class AstridApiConstants {
      */
     public static final String BROADCAST_SEND_DETAILS = PACKAGE + ".SEND_DETAILS";
 
+    // --- Sync Action API
+
+    /**
+     * Action name for broadcast intent requesting a listing of active
+     * sync actions users can activate from the menu
+     */
+    public static final String BROADCAST_REQUEST_SYNC_ACTIONS = PACKAGE + ".REQUEST_SYNC_ACTIONS";
+
+    /**
+     * Action name for broadcast intent sending sync provider information back to Astrid
+     * @extra EXTRAS_ADDON your add-on identifier
+     * @extra EXTRAS_RESPONSE a {@link SyncAction} to invoke synchronization
+     */
+    public static final String BROADCAST_SEND_SYNC_ACTIONS = PACKAGE + ".SEND_SYNC_ACTIONS";
+
     // --- Task Actions API
 
     /**
@@ -179,17 +199,22 @@ public class AstridApiConstants {
      */
     public static final String ACTION_TASK_LIST_MENU = PACKAGE + ".TASK_LIST_MENU";
 
-    // --- Settings API
-
     /**
-     * Action name for intents to be displayed in Astrid's settings
+     * Action name for intents to be displayed in Astrid's settings. By default,
+     * your application will be put into the category named by your application,
+     * but you can add a string meta-data with name "category" to override this.
      */
     public static final String ACTION_SETTINGS = PACKAGE + ".SETTINGS";
 
     // --- Events API
 
     /**
-     * Action name for broadcast intent notifying task list to refresh
+     * Action name for broadcast intent notifying add-ons that Astrid started up
+     */
+    public static final String BROADCAST_EVENT_STARTUP = PACKAGE + ".STARTUP";
+
+    /**
+     * Action name for broadcast intent notifying Astrid task list to refresh
      */
     public static final String BROADCAST_EVENT_REFRESH = PACKAGE + ".REFRESH";
 
@@ -206,17 +231,5 @@ public class AstridApiConstants {
      * @extra EXTRAS_NEW_DUE_DATE task new due date (will not be 0)
      */
     public static final String BROADCAST_EVENT_TASK_REPEATED = PACKAGE + ".TASK_REPEATED";
-
-    // --- SQL Constants
-
-    /**
-     * Table name for tasks
-     */
-    public static final String TASK_TABLE = "tasks";
-
-    /**
-     * Table name for metadata
-     */
-    public static final String METADATA_TABLE = "metadata";
 
 }

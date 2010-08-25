@@ -1,12 +1,12 @@
 package com.todoroo.andlib;
 
-import static com.todoroo.andlib.Constants.AND;
-import static com.todoroo.andlib.Constants.EXISTS;
-import static com.todoroo.andlib.Constants.LEFT_PARENTHESIS;
-import static com.todoroo.andlib.Constants.NOT;
-import static com.todoroo.andlib.Constants.OR;
-import static com.todoroo.andlib.Constants.RIGHT_PARENTHESIS;
-import static com.todoroo.andlib.Constants.SPACE;
+import static com.todoroo.andlib.SqlConstants.AND;
+import static com.todoroo.andlib.SqlConstants.EXISTS;
+import static com.todoroo.andlib.SqlConstants.LEFT_PARENTHESIS;
+import static com.todoroo.andlib.SqlConstants.NOT;
+import static com.todoroo.andlib.SqlConstants.OR;
+import static com.todoroo.andlib.SqlConstants.RIGHT_PARENTHESIS;
+import static com.todoroo.andlib.SqlConstants.SPACE;
 
 public abstract class Criterion {
     protected final Operator operator;

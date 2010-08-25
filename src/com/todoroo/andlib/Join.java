@@ -1,8 +1,8 @@
 package com.todoroo.andlib;
 
-import static com.todoroo.andlib.Constants.JOIN;
-import static com.todoroo.andlib.Constants.ON;
-import static com.todoroo.andlib.Constants.SPACE;
+import static com.todoroo.andlib.SqlConstants.JOIN;
+import static com.todoroo.andlib.SqlConstants.ON;
+import static com.todoroo.andlib.SqlConstants.SPACE;
 
 public class Join {
     private final SqlTable joinTable;
