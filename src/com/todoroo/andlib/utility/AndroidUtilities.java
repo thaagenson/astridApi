@@ -6,6 +6,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Arrays;
@@ -370,6 +372,40 @@ public class AndroidUtilities {
         } catch (InterruptedException e) {
             // ignore
         }
+    }
+
+    /**
+     * Call a method via reflection if API level is at least minSdk
+     * @param minSdk minimum sdk number (i.e. 8)
+     * @param receiver object to call method on
+     * @param methodName method name to call
+     * @param params method parameter types
+     * @param args arguments
+     * @return method return value, or null if nothing was called or exception
+     */
+    @SuppressWarnings("nls")
+    public static Object callApiMethod(int minSdk, Object receiver,
+            String methodName, Class<?>[] params, Object... args) {
+        if(getSdkVersion() < minSdk)
+            return null;
+
+        Method method;
+        try {
+            method = receiver.getClass().getMethod(methodName, params);
+            return method.invoke(receiver, args);
+        } catch (SecurityException e) {
+            getExceptionService().reportError("call-method", e);
+        } catch (NoSuchMethodException e) {
+            getExceptionService().reportError("call-method", e);
+        } catch (IllegalArgumentException e) {
+            getExceptionService().reportError("call-method", e);
+        } catch (IllegalAccessException e) {
+            getExceptionService().reportError("call-method", e);
+        } catch (InvocationTargetException e) {
+            getExceptionService().reportError("call-method", e);
+        }
+
+        return null;
     }
 
     // --- internal

@@ -6,6 +6,14 @@ import com.todoroo.andlib.data.ContentResolverDao;
 import com.todoroo.andlib.sql.Criterion;
 import com.todoroo.andlib.sql.Functions;
 
+/**
+ * Data access object for accessing Astrid's {@link Task} table. If you
+ * are looking to store extended information about a Task, you probably
+ * want to use the {@link MetadataApiDao} object.
+ *
+ * @author Tim Su <tim@todoroo.com>
+ *
+ */
 public class TaskApiDao extends ContentResolverDao<Task> {
 
     public TaskApiDao(Context context) {

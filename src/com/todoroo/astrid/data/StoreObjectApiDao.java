@@ -5,6 +5,13 @@ import android.content.Context;
 import com.todoroo.andlib.data.ContentResolverDao;
 import com.todoroo.andlib.sql.Criterion;
 
+/**
+ * Data access object for accessing Astrid's {@link StoreObject} table. A
+ * StoreObject is an arbitrary piece of data stored inside of Astrid.
+ *
+ * @author Tim Su <tim@todoroo.com>
+ *
+ */
 public class StoreObjectApiDao extends ContentResolverDao<StoreObject> {
 
     public StoreObjectApiDao(Context context) {

@@ -11,6 +11,14 @@ import com.todoroo.andlib.data.TodorooCursor;
 import com.todoroo.andlib.sql.Criterion;
 import com.todoroo.andlib.sql.Query;
 
+/**
+ * Data access object for accessing Astrid's {@link Metadata} table. A
+ * piece of Metadata is information about a task, for example a tag or a
+ * note. It operates in a one-to-many relation with tasks.
+ *
+ * @author Tim Su <tim@todoroo.com>
+ *
+ */
 public class MetadataApiDao extends ContentResolverDao<Metadata> {
 
     public MetadataApiDao(Context context) {
