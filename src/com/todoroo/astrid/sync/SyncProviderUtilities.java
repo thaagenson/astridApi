@@ -24,15 +24,15 @@ abstract public class SyncProviderUtilities {
 
     // --- implementation
 
-    private static final String PREF_TOKEN = "_token"; //$NON-NLS-1$
+    protected static final String PREF_TOKEN = "_token"; //$NON-NLS-1$
 
-    private static final String PREF_LAST_SYNC = "_last_sync"; //$NON-NLS-1$
+    protected static final String PREF_LAST_SYNC = "_last_sync"; //$NON-NLS-1$
 
-    private static final String PREF_LAST_ATTEMPTED_SYNC = "_last_attempted"; //$NON-NLS-1$
+    protected static final String PREF_LAST_ATTEMPTED_SYNC = "_last_attempted"; //$NON-NLS-1$
 
-    private static final String PREF_LAST_ERROR = "_last_error"; //$NON-NLS-1$
+    protected static final String PREF_LAST_ERROR = "_last_error"; //$NON-NLS-1$
 
-    private static final String PREF_ONGOING = "_ongoing"; //$NON-NLS-1$
+    protected static final String PREF_ONGOING = "_ongoing"; //$NON-NLS-1$
 
     /** Get preferences object from the context */
     protected static SharedPreferences getPrefs() {
