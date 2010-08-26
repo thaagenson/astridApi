@@ -22,7 +22,7 @@ Getting Started With Development
 4. If you are creating a new add-on for Astrid, create a new project in **eclipse**
  • in the Android tab of the project, indicate astridApi as a library reference
  
-5. Check out the wiki and javadocs
+5. Check out the [wiki](http://wiki.github.com/todoroo/astridApi) and [javadoc](http://todoroo.github.com/astridApi)
 
 Contact
 -------
