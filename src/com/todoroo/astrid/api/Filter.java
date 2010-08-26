@@ -7,7 +7,7 @@ import android.content.ContentValues;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.todoroo.andlib.QueryTemplate;
+import com.todoroo.andlib.sql.QueryTemplate;
 
 /**
  * A <code>FilterListFilter</code> allows users to display tasks that have

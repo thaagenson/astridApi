@@ -9,17 +9,19 @@ package com.todoroo.astrid.data;
 import java.util.Date;
 
 import android.content.ContentValues;
+import android.content.res.Resources;
 import android.net.Uri;
 
-import com.todoroo.andlib.AbstractModel;
-import com.todoroo.andlib.DateUtilities;
-import com.todoroo.andlib.Property;
-import com.todoroo.andlib.Table;
-import com.todoroo.andlib.TodorooCursor;
-import com.todoroo.andlib.Property.IntegerProperty;
-import com.todoroo.andlib.Property.LongProperty;
-import com.todoroo.andlib.Property.StringProperty;
+import com.todoroo.andlib.data.AbstractModel;
+import com.todoroo.andlib.data.Property;
+import com.todoroo.andlib.data.Property.IntegerProperty;
+import com.todoroo.andlib.data.Property.LongProperty;
+import com.todoroo.andlib.data.Property.StringProperty;
+import com.todoroo.andlib.data.Table;
+import com.todoroo.andlib.data.TodorooCursor;
+import com.todoroo.andlib.utility.DateUtilities;
 import com.todoroo.astrid.api.AstridApiConstants;
+import com.todoroo.astrid.api.R;
 
 /**
  * Data Model which represents a task users need to accomplish.
@@ -30,8 +32,9 @@ import com.todoroo.astrid.api.AstridApiConstants;
 @SuppressWarnings("nls")
 public final class Task extends AbstractModel {
 
-    // --- table
+    // --- table and uri
 
+    /** table for this model */
     public static final Table TABLE = new Table("tasks", Task.class);
 
     /** content uri for this model */
@@ -76,7 +79,13 @@ public final class Task extends AbstractModel {
     public static final LongProperty DELETION_DATE = new LongProperty(
             TABLE, "deleted");
 
-    // --- for migration purposes from astrid 2 (eventually we will want to
+    /** Cached Details Column - built from add-on detail exposers. A null
+     * value means there is no value in the cache and it needs to be
+     * refreshed */
+    public static final StringProperty DETAILS = new StringProperty(
+            TABLE, "details");
+
+    // --- for migration purposes from astrid 2 (eventually we may want to
     //     move these into the metadata table and treat them as plug-ins
 
     public static final StringProperty NOTES = new StringProperty(
@@ -134,12 +143,26 @@ public final class Task extends AbstractModel {
     /** reminder mode non-stop */
     public static final int NOTIFY_NONSTOP = 1 << 3;
 
-    // --- importance settings
+    // --- importance settings (note: importance > 3 are supported via plugin)
 
     public static final int IMPORTANCE_DO_OR_DIE = 0;
     public static final int IMPORTANCE_MUST_DO = 1;
     public static final int IMPORTANCE_SHOULD_DO = 2;
     public static final int IMPORTANCE_NONE = 3;
+
+    /**
+     * @return colors that correspond to importance values
+     */
+    public static int[] getImportanceColors(Resources r) {
+        return new int[] {
+                r.getColor(R.color.importance_1),
+                r.getColor(R.color.importance_2),
+                r.getColor(R.color.importance_3),
+                r.getColor(R.color.importance_4),
+                r.getColor(R.color.importance_5),
+                r.getColor(R.color.importance_6),
+        };
+    }
 
     public static final int IMPORTANCE_MOST = IMPORTANCE_DO_OR_DIE;
     public static final int IMPORTANCE_LEAST = IMPORTANCE_NONE;
@@ -167,6 +190,7 @@ public final class Task extends AbstractModel {
         defaultValues.put(NOTES.name, "");
         defaultValues.put(FLAGS.name, 0);
         defaultValues.put(TIMER_START.name, 0);
+        defaultValues.put(DETAILS.name, (String)null);
     }
 
     @Override
@@ -196,7 +220,7 @@ public final class Task extends AbstractModel {
 
     // --- parcelable helpers
 
-    private static final Creator<Task> CREATOR = new ModelCreator<Task>(Task.class);
+    public static final Creator<Task> CREATOR = new ModelCreator<Task>(Task.class);
 
     @Override
     protected Creator<? extends AbstractModel> getCreator() {
@@ -379,6 +403,8 @@ public final class Task extends AbstractModel {
      * Checks whether this due date has a due time or only a date
      */
     public boolean hasDueTime() {
+        if(!hasDueDate())
+            return false;
         return hasDueTime(getValue(Task.DUE_DATE));
     }
 

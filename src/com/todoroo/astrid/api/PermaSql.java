@@ -5,7 +5,7 @@ package com.todoroo.astrid.api;
 
 import java.util.Date;
 
-import com.todoroo.andlib.DateUtilities;
+import com.todoroo.andlib.utility.DateUtilities;
 
 /**
  * PermaSql allows for creating SQL statements that can be saved and used

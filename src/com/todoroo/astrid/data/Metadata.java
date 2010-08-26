@@ -7,12 +7,12 @@ package com.todoroo.astrid.data;
 import android.content.ContentValues;
 import android.net.Uri;
 
-import com.todoroo.andlib.AbstractModel;
-import com.todoroo.andlib.Property;
-import com.todoroo.andlib.Table;
-import com.todoroo.andlib.TodorooCursor;
-import com.todoroo.andlib.Property.LongProperty;
-import com.todoroo.andlib.Property.StringProperty;
+import com.todoroo.andlib.data.AbstractModel;
+import com.todoroo.andlib.data.Property;
+import com.todoroo.andlib.data.Table;
+import com.todoroo.andlib.data.TodorooCursor;
+import com.todoroo.andlib.data.Property.LongProperty;
+import com.todoroo.andlib.data.Property.StringProperty;
 import com.todoroo.astrid.api.AstridApiConstants;
 
 /**
@@ -26,6 +26,7 @@ public class Metadata extends AbstractModel {
 
     // --- table
 
+    /** table for this model */
     public static final Table TABLE = new Table("metadata", Metadata.class);
 
     /** content uri for this model */
@@ -54,15 +55,15 @@ public class Metadata extends AbstractModel {
     public static final StringProperty VALUE2 = new StringProperty(
             TABLE, "value2");
 
-    /** Metadata Text Value Column 1 */
+    /** Metadata Text Value Column 3 */
     public static final StringProperty VALUE3 = new StringProperty(
             TABLE, "value3");
 
-    /** Metadata Text Value Column 1 */
+    /** Metadata Text Value Column 4 */
     public static final StringProperty VALUE4 = new StringProperty(
             TABLE, "value4");
 
-    /** Metadata Text Value Column 1 */
+    /** Metadata Text Value Column 5 */
     public static final StringProperty VALUE5 = new StringProperty(
             TABLE, "value5");
 
@@ -101,7 +102,7 @@ public class Metadata extends AbstractModel {
 
     // --- parcelable helpers
 
-    private static final Creator<Task> CREATOR = new ModelCreator<Task>(Task.class);
+    private static final Creator<Metadata> CREATOR = new ModelCreator<Metadata>(Metadata.class);
 
     @Override
     protected Creator<? extends AbstractModel> getCreator() {
