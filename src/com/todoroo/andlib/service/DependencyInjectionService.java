@@ -1,7 +1,7 @@
 package com.todoroo.andlib.service;
 
 import java.lang.reflect.Field;
-import java.util.Arrays;
+import java.util.LinkedList;
 
 
 
@@ -24,9 +24,7 @@ public class DependencyInjectionService {
     /**
      * Dependency injectors. Use getters and setters to modify this list
      */
-    private AbstractDependencyInjector[] injectors = {
-        new DefaultDependencyInjector()
-    };
+    private final LinkedList<AbstractDependencyInjector> injectors = new LinkedList<AbstractDependencyInjector>();
 
     /**
      * Perform dependency injection in the caller object
@@ -105,7 +103,7 @@ public class DependencyInjectionService {
                 String.format("No dependency injector found for autowired " +
                 		"field '%s' in class '%s'. Injectors: %s",
                         field.getName(), caller.getClass().getName(),
-                        Arrays.asList(getInjectors())));
+                        injectors));
     }
 
     // --- default dependency injector
@@ -125,6 +123,7 @@ public class DependencyInjectionService {
 
     DependencyInjectionService() {
         // prevent instantiation
+        injectors.add(new DefaultDependencyInjector());
     }
 
     /**
@@ -138,19 +137,21 @@ public class DependencyInjectionService {
     }
 
     /**
-     * Gets the array of installed injectors
+     * Removes the supplied injector
      * @return
      */
-    public synchronized AbstractDependencyInjector[] getInjectors() {
-        return injectors;
+    public synchronized void removeInjector(AbstractDependencyInjector injector) {
+        injectors.remove(injector);
     }
 
     /**
-     * Sets the array of installed injectors
+     * Adds a Dependency Injector to the front of the list
      * @param injectors
      */
-    public synchronized void setInjectors(AbstractDependencyInjector[] injectors) {
-        this.injectors = injectors;
+    public synchronized void addInjector(AbstractDependencyInjector injector) {
+        removeInjector(injector);
+
+        this.injectors.addFirst(injector);
     }
 
 }
