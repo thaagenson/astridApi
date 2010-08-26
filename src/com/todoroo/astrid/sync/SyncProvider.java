@@ -25,11 +25,15 @@ import com.todoroo.astrid.data.Task;
  * A helper class for writing synchronization services for Astrid. This class
  * contains logic for merging incoming changes and writing outgoing changes.
  * <p>
- * Use {@link initiate} as the entry point for your synchronization service,
- * which should handle authentication and then call {@link synchronizeTasks} to
- * initiate synchronization.
+ * Use {@link #initiateManual} as the entry point for your synchronization
+ * service, which should check if a user is logged in. If not, you should
+ * handle that in the UI, otherwise, you should launch your background
+ * service to perform synchronization in the background.
+ * <p>
+ * Your background service should {@link #synchronize}, which in turn
+ * invokes  {@link #initiateBackground} to initiate synchronization.
  *
- * @author timsu
+ * @author Tim Su <tim@todoroo.com>
  *
  */
 public abstract class SyncProvider<TYPE extends SyncContainer> {

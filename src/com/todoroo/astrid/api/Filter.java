@@ -71,9 +71,9 @@ public final class Filter extends FilterListItem {
      *            Expanded title of this filter when user is viewing this
      *            filter, e.g. Inbox (20 tasks)
      * @param sqlQuery
-     *            SQL query for this list (see {@link sqlQuery} for examples).
+     *            SQL query for this list (see {@link #sqlQuery} for examples).
      * @param valuesForNewTasks
-     *            see {@link sqlForNewTasks}
+     *            see {@link #sqlForNewTasks}
      */
     public Filter(String listingTitle, String title,
             QueryTemplate sqlQuery, ContentValues valuesForNewTasks) {
@@ -89,9 +89,9 @@ public final class Filter extends FilterListItem {
      *            Expanded title of this filter when user is viewing this
      *            filter, e.g. Inbox (20 tasks)
      * @param sqlQuery
-     *            SQL query for this list (see {@link sqlQuery} for examples).
+     *            SQL query for this list (see {@link #sqlQuery} for examples).
      * @param valuesForNewTasks
-     *            see {@link sqlForNewTasks}
+     *            see {@link #sqlForNewTasks}
      */
     public Filter(String listingTitle, String title,
             String sqlQuery, ContentValues valuesForNewTasks) {

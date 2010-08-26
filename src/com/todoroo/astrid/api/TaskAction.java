@@ -31,7 +31,7 @@ public class TaskAction implements Parcelable {
      * @param text
      *            label to display
      * @param intent
-     *            intent to invoke. {@link EXTRAS_TASK_ID} will be passed
+     *            intent to invoke. {@link #EXTRAS_TASK_ID} will be passed
      */
     public TaskAction(String text, PendingIntent intent) {
         super();

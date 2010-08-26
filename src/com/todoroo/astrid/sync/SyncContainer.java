@@ -10,7 +10,7 @@ import com.todoroo.astrid.data.Task;
  * Container class for transmitting tasks and including local and remote
  * metadata. Synchronization Providers can subclass this class if desired.
  *
- * @see {@link SyncProvider}
+ * @see SyncProvider
  * @author Tim Su <tim@todoroo.com>
  *
  */

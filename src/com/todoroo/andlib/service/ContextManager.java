@@ -21,6 +21,7 @@ public final class ContextManager {
 
     /**
      * Sets the global context
+     *
      * @param context
      */
     public static void setContext(Context context) {
@@ -37,9 +38,9 @@ public final class ContextManager {
     /**
      * Convenience method to read a string from the resources
      *
-     * @param resid
-     * @param parameters
-     * @return
+     * @param resId resource
+     * @param parameters % arguments
+     * @return resource string
      */
     public static String getString(int resId, Object... formatArgs) {
         return context.getString(resId, formatArgs);
@@ -48,7 +49,7 @@ public final class ContextManager {
     /**
      * Convenience method to read resources
      *
-     * @return
+     * @return resources object
      */
     public static Resources getResources() {
         return context.getResources();

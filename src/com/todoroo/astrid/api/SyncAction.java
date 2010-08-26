@@ -31,7 +31,7 @@ public class SyncAction implements Parcelable {
      * @param label
      *            label to display
      * @param intent
-     *            intent to invoke. {@link EXTRAS_TASK_ID} will be passed
+     *            intent to invoke
      */
     public SyncAction(String label, PendingIntent intent) {
         super();

@@ -200,8 +200,8 @@ public final class Query {
 
     /**
      * Add the SQL query template (comes after the "from")
-     * @param sqlQuery
-     * @return
+     * @param template
+     * @return query
      */
     public Query withQueryTemplate(String template) {
         queryTemplate = template;

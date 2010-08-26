@@ -84,7 +84,7 @@ public class AstridApiConstants {
 
     /**
      * Action name for broadcast intent sending add-ons back to Astrid
-     * @extra EXTRAS_RESPONSE an {@link Addon} object
+     * <li> EXTRAS_RESPONSE an {@link Addon} object
      */
     public static final String BROADCAST_SEND_ADDONS = PACKAGE + ".SEND_ADDONS";
 
@@ -97,8 +97,8 @@ public class AstridApiConstants {
 
     /**
      * Action name for broadcast intent sending filters back to Astrid
-     * @extra EXTRAS_ADDON your add-on identifier
-     * @extra EXTRAS_RESPONSE an array of {@link FilterListItem}s
+     * <li> EXTRAS_ADDON your add-on identifier
+     * <li> EXTRAS_RESPONSE an array of {@link FilterListItem}s
      */
     public static final String BROADCAST_SEND_FILTERS = PACKAGE + ".SEND_FILTERS";
 
@@ -106,14 +106,14 @@ public class AstridApiConstants {
 
     /**
      * Action name for broadcast intent requesting task edit controls
-     * @extra EXTRAS_TASK_ID id of the task user is editing
+     * <li> EXTRAS_TASK_ID id of the task user is editing
      */
     public static final String BROADCAST_REQUEST_EDIT_CONTROLS = PACKAGE + ".REQUEST_EDIT_CONTROLS";
 
     /**
      * Action name for broadcast intent sending task edit controls back to Astrid
-     * @extra EXTRAS_ADDON your add-on identifier
-     * @extra EXTRAS_RESPONSE a {@link RemoteViews} with your edit controls
+     * <li> EXTRAS_ADDON your add-on identifier
+     * <li> EXTRAS_RESPONSE a {@link RemoteViews} with your edit controls
      */
     public static final String BROADCAST_SEND_EDIT_CONTROLS = PACKAGE + ".SEND_EDIT_CONTROLS";
 
@@ -123,17 +123,17 @@ public class AstridApiConstants {
      * Action name for broadcast intent requesting details for a task.
      * Extended details are displayed when a user presses on a task.
      *
-     * @extra EXTRAS_TASK_ID id of the task
-     * @extra EXTRAS_EXTENDED whether request is for standard or extended details
+     * <li> EXTRAS_TASK_ID id of the task
+     * <li> EXTRAS_EXTENDED whether request is for standard or extended details
      */
     public static final String BROADCAST_REQUEST_DETAILS = PACKAGE + ".REQUEST_DETAILS";
 
     /**
      * Action name for broadcast intent sending details back to Astrid
-     * @extra EXTRAS_ADDON your add-on identifier
-     * @extra EXTRAS_TASK_ID id of the task
-     * @extra EXTRAS_EXTENDED whether request is for standard or extended details
-     * @extra EXTRAS_RESPONSE a String
+     * <li> EXTRAS_ADDON your add-on identifier
+     * <li> EXTRAS_TASK_ID id of the task
+     * <li> EXTRAS_EXTENDED whether request is for standard or extended details
+     * <li> EXTRAS_RESPONSE a String
      */
     public static final String BROADCAST_SEND_DETAILS = PACKAGE + ".SEND_DETAILS";
 
@@ -147,8 +147,8 @@ public class AstridApiConstants {
 
     /**
      * Action name for broadcast intent sending sync provider information back to Astrid
-     * @extra EXTRAS_ADDON your add-on identifier
-     * @extra EXTRAS_RESPONSE a {@link SyncAction} to invoke synchronization
+     * <li> EXTRAS_ADDON your add-on identifier
+     * <li> EXTRAS_RESPONSE a {@link SyncAction} to invoke synchronization
      */
     public static final String BROADCAST_SEND_SYNC_ACTIONS = PACKAGE + ".SEND_SYNC_ACTIONS";
 
@@ -156,15 +156,15 @@ public class AstridApiConstants {
 
     /**
      * Action name for broadcast intent requesting actions for a task
-     * @extra EXTRAS_TASK_ID id of the task
+     * <li> EXTRAS_TASK_ID id of the task
      */
     public static final String BROADCAST_REQUEST_ACTIONS = PACKAGE + ".REQUEST_ACTIONS";
 
     /**
      * Action name for broadcast intent sending actions back to Astrid
-     * @extra EXTRAS_ADDON your add-on identifier
-     * @extra EXTRAS_TASK_ID id of the task
-     * @extra EXTRAS_RESPONSE a String
+     * <li> EXTRAS_ADDON your add-on identifier
+     * <li> EXTRAS_TASK_ID id of the task
+     * <li> EXTRAS_RESPONSE a String
      */
     public static final String BROADCAST_SEND_ACTIONS = PACKAGE + ".SEND_ACTIONS";
 
@@ -172,15 +172,15 @@ public class AstridApiConstants {
 
     /**
      * Action name for broadcast intent requesting task list decorations for a task
-     * @extra EXTRAS_TASK_ID id of the task
+     * <li> EXTRAS_TASK_ID id of the task
      */
     public static final String BROADCAST_REQUEST_DECORATIONS = PACKAGE + ".REQUEST_DECORATIONS";
 
     /**
      * Action name for broadcast intent sending decorations back to Astrid
-     * @extra EXTRAS_ADDON your add-on identifier
-     * @extra EXTRAS_TASK_ID id of the task
-     * @extra EXTRAS_RESPONSE a {@link TaskDecoration}
+     * <li> EXTRAS_ADDON your add-on identifier
+     * <li> EXTRAS_TASK_ID id of the task
+     * <li> EXTRAS_RESPONSE a {@link TaskDecoration}
      */
     public static final String BROADCAST_SEND_DECORATIONS = PACKAGE + ".SEND_DECORATIONS";
 
@@ -188,14 +188,14 @@ public class AstridApiConstants {
 
     /**
      * Action name for intents to be displayed on task context menu
-     * @extra EXTRAS_TASK_ID id of the task
+     * <li> EXTRAS_TASK_ID id of the task
      */
     public static final String ACTION_TASK_CONTEXT_MENU = PACKAGE + ".CONTEXT_MENU";
 
     /**
      * Action name for intents to be displayed on Astrid's task list menu
-     * @extra EXTRAS_ADDON your add-on identifier
-     * @extra EXTRAS_RESPONSE an array of {@link Intent}s
+     * <li> EXTRAS_ADDON your add-on identifier
+     * <li> EXTRAS_RESPONSE an array of {@link Intent}s
      */
     public static final String ACTION_TASK_LIST_MENU = PACKAGE + ".TASK_LIST_MENU";
 
@@ -228,15 +228,15 @@ public class AstridApiConstants {
 
     /**
      * Action name for broadcast intent notifying that task was completed
-     * @extra EXTRAS_TASK_ID id of the task
+     * <li> EXTRAS_TASK_ID id of the task
      */
     public static final String BROADCAST_EVENT_TASK_COMPLETED = PACKAGE + ".TASK_COMPLETED";
 
     /**
      * Action name for broadcast intent notifying that task was created from repeating template
-     * @extra EXTRAS_TASK_ID id of the task
-     * @extra EXTRAS_OLD_DUE_DATE task old due date (could be 0)
-     * @extra EXTRAS_NEW_DUE_DATE task new due date (will not be 0)
+     * <li> EXTRAS_TASK_ID id of the task
+     * <li> EXTRAS_OLD_DUE_DATE task old due date (could be 0)
+     * <li> EXTRAS_NEW_DUE_DATE task new due date (will not be 0)
      */
     public static final String BROADCAST_EVENT_TASK_REPEATED = PACKAGE + ".TASK_REPEATED";
 

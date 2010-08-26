@@ -25,7 +25,7 @@ public class TaskApiDao extends ContentResolverDao<Task> {
      */
     public static class TaskCriteria {
 
-        /** @returns tasks by id */
+        /** @return tasks by id */
         public static Criterion byId(long id) {
             return Task.ID.eq(id);
         }

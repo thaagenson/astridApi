@@ -9,7 +9,7 @@ import android.content.Context;
 /**
  * Notification Manager stub
  *
- * @author timsu
+ * @author Tim Su <tim@todoroo.com>
  *
  */
 public interface NotificationManager {
@@ -24,7 +24,7 @@ public interface NotificationManager {
      * Instantiation of notification manager that passes through to
      * Android's notification manager
      *
-     * @author timsu
+     * @author Tim Su <tim@todoroo.com>
      *
      */
     public static class AndroidNotificationManager implements NotificationManager {

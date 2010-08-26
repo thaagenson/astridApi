@@ -68,8 +68,15 @@
         <javadoc access="public" author="true" classpath="." destdir="doc" 
                  doctitle="Astrid API Project" nodeprecated="false" 
                  nodeprecatedlist="false" noindex="false" nonavbar="false" 
-                 notree="false" source="1.6" sourcepath="src" splitindex="true" 
-                 use="true" version="true"/>
+                 notree="false" source="1.6" splitindex="true" 
+                 use="true" version="true">
+          <sourcefiles>
+            <fileset dir="." includes="src/**/*" />
+          </sourcefiles>
+          <classpath>
+            <fileset dir="${sdk.dir}/platforms/${target}" includes="android.jar" />
+          </classpath>
+        </javadoc>
     </target>
 
 </project>
