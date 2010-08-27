@@ -111,7 +111,7 @@ public class ExceptionService {
                 PackageManager pm = ContextManager.getContext().getPackageManager();
                 try {
                     String appName = pm.getApplicationInfo(ContextManager.getContext().
-                            getPackageName(), 0).name;
+                            getPackageName(), 0).loadLabel(pm).toString();
                     tag = appName + "-" +  name; //$NON-NLS-1$
                 } catch (NameNotFoundException e) {
                     // give up
