@@ -4,66 +4,6 @@
 
   <!-- ==================================================== Generic Units == -->
   
-  <plurals name="DUt_years">
-    <!-- plurals: years -->
-    <item quantity="one">1 Year</item>
-    <!-- plurals: years -->
-    <item quantity="other">%d Years</item>
-  </plurals>
-  <plurals name="DUt_months">
-    <!-- plurals: months -->
-    <item quantity="one">1 Month</item>
-    <!-- plurals: months -->
-    <item quantity="other">%d Months</item>
-  </plurals>
-  <plurals name="DUt_weeks">
-    <!-- plurals: days -->
-    <item quantity="one">1 Week</item>
-    <!-- plurals: days -->
-    <item quantity="other">%d Weeks</item>
-  </plurals>
-  <plurals name="DUt_days">
-    <!-- plurals: days -->
-    <item quantity="one">1 dag</item>
-    <!-- plurals: days -->
-    <item quantity="other">%d Dagen</item>
-  </plurals>
-  <plurals name="DUt_hours">
-    <!-- plurals: hours -->
-    <item quantity="one">1 Uur</item>
-    <!-- plurals: hours -->
-    <item quantity="other">%d Uren</item>
-  </plurals>
-  <plurals name="DUt_minutes">
-    <!-- plurals: minutes -->
-    <item quantity="one">1 Minuut</item>
-    <!-- plurals: minutes -->
-    <item quantity="other">%d Minuten</item>
-  </plurals>
-  <plurals name="DUt_seconds">
-    <!-- plurals: seconds -->
-    <item quantity="one">1 Seconde</item>
-    <!-- plurals: seconds -->
-    <item quantity="other">%d Seconden</item>
-  </plurals>
-  <plurals name="DUt_hoursShort">
-    <!-- plurals: hours (abbreviated) -->
-    <item quantity="one">1 U</item>
-    <!-- plurals: hours (abbreviated) -->
-    <item quantity="other">%d Uur</item>
-  </plurals>
-  <plurals name="DUt_minutesShort">
-    <!-- plurals: minutes (abbreviated) -->
-    <item quantity="one">1 Min</item>
-    <!-- plurals: minutes (abbreviated) -->
-    <item quantity="other">%d Min</item>
-  </plurals>
-  <plurals name="DUt_secondsShort">
-    <!-- plurals: seconds (abbreviated) -->
-    <item quantity="one">1 Sec</item>
-    <!-- plurals: seconds (abbreviated) -->
-    <item quantity="other">%d Sec</item>
-  </plurals>
   <plurals name="Ntasks">
     <!-- plurals: tasks -->
     <item quantity="one">1 task</item>

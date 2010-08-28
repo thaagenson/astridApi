@@ -4,66 +4,6 @@
 
   <!-- ==================================================== Generic Units == -->
   
-  <plurals name="DUt_years">
-    <!-- plurals: years -->
-    <item quantity="one">1 Year</item>
-    <!-- plurals: years -->
-    <item quantity="other">%d Years</item>
-  </plurals>
-  <plurals name="DUt_months">
-    <!-- plurals: months -->
-    <item quantity="one">1 Month</item>
-    <!-- plurals: months -->
-    <item quantity="other">%d Months</item>
-  </plurals>
-  <plurals name="DUt_weeks">
-    <!-- plurals: days -->
-    <item quantity="one">1 Week</item>
-    <!-- plurals: days -->
-    <item quantity="other">%d Weeks</item>
-  </plurals>
-  <plurals name="DUt_days">
-    <!-- plurals: days -->
-    <item quantity="one">1 Dia</item>
-    <!-- plurals: days -->
-    <item quantity="other">%d Dies</item>
-  </plurals>
-  <plurals name="DUt_hours">
-    <!-- plurals: hours -->
-    <item quantity="one">1 Hora</item>
-    <!-- plurals: hours -->
-    <item quantity="other">%d Hores</item>
-  </plurals>
-  <plurals name="DUt_minutes">
-    <!-- plurals: minutes -->
-    <item quantity="one">1 Minut</item>
-    <!-- plurals: minutes -->
-    <item quantity="other">%d Minuts</item>
-  </plurals>
-  <plurals name="DUt_seconds">
-    <!-- plurals: seconds -->
-    <item quantity="one">1 Segon</item>
-    <!-- plurals: seconds -->
-    <item quantity="other">%d Segons</item>
-  </plurals>
-  <plurals name="DUt_hoursShort">
-    <!-- plurals: hours (abbreviated) -->
-    <item quantity="one">1 Hr</item>
-    <!-- plurals: hours (abbreviated) -->
-    <item quantity="other">%d Hrs</item>
-  </plurals>
-  <plurals name="DUt_minutesShort">
-    <!-- plurals: minutes (abbreviated) -->
-    <item quantity="one">1 Min</item>
-    <!-- plurals: minutes (abbreviated) -->
-    <item quantity="other">%d Min</item>
-  </plurals>
-  <plurals name="DUt_secondsShort">
-    <!-- plurals: seconds (abbreviated) -->
-    <item quantity="one">1 Seg</item>
-    <!-- plurals: seconds (abbreviated) -->
-    <item quantity="other">%d Seg</item>
-  </plurals>
   <plurals name="Ntasks">
     <!-- plurals: tasks -->
     <item quantity="one">1 task</item>
@@ -80,7 +20,7 @@
   <string name="DLG_question_title">Question:</string>
   
   <!-- information dialog title -->
-  <string name="DLG_information_title">Informació</string>
+  <string name="DLG_information_title">Information</string>
   
   <!-- error dialog title -->
   <string name="DLG_error_title">Error!</string>
@@ -95,7 +35,7 @@
   <string name="DLG_close">Close</string>
   
   <!-- general dialog done -->
-  <string name="DLG_done">Fet</string>
+  <string name="DLG_done">Done</string>
   
   <!-- error dialog (%s => error message)-->
   <string name="DLG_error">Oops, looks like an error occurred! Here\'s what happened:\n\n%s</string>
@@ -136,7 +76,7 @@
   <string name="sync_status_never">Never Synchronized!</string>
 
   <!-- Options Group Label -->    
-  <string name="sync_SPr_group_options">Opcions</string>
+  <string name="sync_SPr_group_options">Options</string>
 
   <!-- Preference: Synchronization Interval Title -->    
   <string name="sync_SPr_interval_title">Background Sync</string>
@@ -153,10 +93,10 @@
   <string name="sync_SPr_bgwifi_desc_disabled">Background synchronization will always occur</string>
   
   <!-- Actions Group Label  -->
-  <string name="sync_SPr_group_actions">Accions</string>
+  <string name="sync_SPr_group_actions">Actions</string>
 
   <!-- Synchronize Now Button -->    
-  <string name="sync_SPr_sync">Sincronitzar Ara!</string>
+  <string name="sync_SPr_sync">Synchronize Now!</string>
   <!-- Synchronize Now Button if not logged in-->    
   <string name="sync_SPr_sync_log_in">Log In &amp; Synchronize!</string>
   

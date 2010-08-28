@@ -4,66 +4,6 @@
 
   <!-- ==================================================== Generic Units == -->
   
-  <plurals name="DUt_years">
-    <!-- plurals: years -->
-    <item quantity="one">1 Anno</item>
-    <!-- plurals: years -->
-    <item quantity="other">%d Anni</item>
-  </plurals>
-  <plurals name="DUt_months">
-    <!-- plurals: months -->
-    <item quantity="one">1 Mese</item>
-    <!-- plurals: months -->
-    <item quantity="other">%d Mesi</item>
-  </plurals>
-  <plurals name="DUt_weeks">
-    <!-- plurals: days -->
-    <item quantity="one">1 Settimana</item>
-    <!-- plurals: days -->
-    <item quantity="other">%d Settimane</item>
-  </plurals>
-  <plurals name="DUt_days">
-    <!-- plurals: days -->
-    <item quantity="one">1 giorno</item>
-    <!-- plurals: days -->
-    <item quantity="other">%d Giorni</item>
-  </plurals>
-  <plurals name="DUt_hours">
-    <!-- plurals: hours -->
-    <item quantity="one">1 ora</item>
-    <!-- plurals: hours -->
-    <item quantity="other">%d ore</item>
-  </plurals>
-  <plurals name="DUt_minutes">
-    <!-- plurals: minutes -->
-    <item quantity="one">1 minuto</item>
-    <!-- plurals: minutes -->
-    <item quantity="other">%d minuti</item>
-  </plurals>
-  <plurals name="DUt_seconds">
-    <!-- plurals: seconds -->
-    <item quantity="one">1 secondo</item>
-    <!-- plurals: seconds -->
-    <item quantity="other">%d secondi</item>
-  </plurals>
-  <plurals name="DUt_hoursShort">
-    <!-- plurals: hours (abbreviated) -->
-    <item quantity="one">1 ora</item>
-    <!-- plurals: hours (abbreviated) -->
-    <item quantity="other">%d ore</item>
-  </plurals>
-  <plurals name="DUt_minutesShort">
-    <!-- plurals: minutes (abbreviated) -->
-    <item quantity="one">1 min</item>
-    <!-- plurals: minutes (abbreviated) -->
-    <item quantity="other">%d min</item>
-  </plurals>
-  <plurals name="DUt_secondsShort">
-    <!-- plurals: seconds (abbreviated) -->
-    <item quantity="one">1 sec</item>
-    <!-- plurals: seconds (abbreviated) -->
-    <item quantity="other">%d sec</item>
-  </plurals>
   <plurals name="Ntasks">
     <!-- plurals: tasks -->
     <item quantity="one">1 Attività</item>

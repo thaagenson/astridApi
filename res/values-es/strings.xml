@@ -4,66 +4,6 @@
 
   <!-- ==================================================== Generic Units == -->
   
-  <plurals name="DUt_years">
-    <!-- plurals: years -->
-    <item quantity="one">1 año</item>
-    <!-- plurals: years -->
-    <item quantity="other">%d años</item>
-  </plurals>
-  <plurals name="DUt_months">
-    <!-- plurals: months -->
-    <item quantity="one">1 Mes</item>
-    <!-- plurals: months -->
-    <item quantity="other">%d meses</item>
-  </plurals>
-  <plurals name="DUt_weeks">
-    <!-- plurals: days -->
-    <item quantity="one">1 semana</item>
-    <!-- plurals: days -->
-    <item quantity="other">%d semanas</item>
-  </plurals>
-  <plurals name="DUt_days">
-    <!-- plurals: days -->
-    <item quantity="one">1 día</item>
-    <!-- plurals: days -->
-    <item quantity="other">%d días</item>
-  </plurals>
-  <plurals name="DUt_hours">
-    <!-- plurals: hours -->
-    <item quantity="one">1 hora</item>
-    <!-- plurals: hours -->
-    <item quantity="other">%d horas</item>
-  </plurals>
-  <plurals name="DUt_minutes">
-    <!-- plurals: minutes -->
-    <item quantity="one">1 minuto</item>
-    <!-- plurals: minutes -->
-    <item quantity="other">%d minutos</item>
-  </plurals>
-  <plurals name="DUt_seconds">
-    <!-- plurals: seconds -->
-    <item quantity="one">1 segundo</item>
-    <!-- plurals: seconds -->
-    <item quantity="other">%d segundos</item>
-  </plurals>
-  <plurals name="DUt_hoursShort">
-    <!-- plurals: hours (abbreviated) -->
-    <item quantity="one">1 hora</item>
-    <!-- plurals: hours (abbreviated) -->
-    <item quantity="other">%d horas</item>
-  </plurals>
-  <plurals name="DUt_minutesShort">
-    <!-- plurals: minutes (abbreviated) -->
-    <item quantity="one">1 minuto</item>
-    <!-- plurals: minutes (abbreviated) -->
-    <item quantity="other">%d minutos</item>
-  </plurals>
-  <plurals name="DUt_secondsShort">
-    <!-- plurals: seconds (abbreviated) -->
-    <item quantity="one">1 segundo</item>
-    <!-- plurals: seconds (abbreviated) -->
-    <item quantity="other">%d segundos</item>
-  </plurals>
   <plurals name="Ntasks">
     <!-- plurals: tasks -->
     <item quantity="one">1 tarea</item>

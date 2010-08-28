@@ -4,66 +4,6 @@
 
   <!-- ==================================================== Generic Units == -->
   
-  <plurals name="DUt_years">
-    <!-- plurals: years -->
-    <item quantity="one">1年</item>
-    <!-- plurals: years -->
-    <item quantity="other">%d 年</item>
-  </plurals>
-  <plurals name="DUt_months">
-    <!-- plurals: months -->
-    <item quantity="one">1か月</item>
-    <!-- plurals: months -->
-    <item quantity="other">%d か月</item>
-  </plurals>
-  <plurals name="DUt_weeks">
-    <!-- plurals: days -->
-    <item quantity="one">1週間</item>
-    <!-- plurals: days -->
-    <item quantity="other">%d 週間</item>
-  </plurals>
-  <plurals name="DUt_days">
-    <!-- plurals: days -->
-    <item quantity="one">1 日</item>
-    <!-- plurals: days -->
-    <item quantity="other">%d 日</item>
-  </plurals>
-  <plurals name="DUt_hours">
-    <!-- plurals: hours -->
-    <item quantity="one">1 時間</item>
-    <!-- plurals: hours -->
-    <item quantity="other">%d 時間</item>
-  </plurals>
-  <plurals name="DUt_minutes">
-    <!-- plurals: minutes -->
-    <item quantity="one">1 分</item>
-    <!-- plurals: minutes -->
-    <item quantity="other">%d 分</item>
-  </plurals>
-  <plurals name="DUt_seconds">
-    <!-- plurals: seconds -->
-    <item quantity="one">1 秒</item>
-    <!-- plurals: seconds -->
-    <item quantity="other">%d 秒</item>
-  </plurals>
-  <plurals name="DUt_hoursShort">
-    <!-- plurals: hours (abbreviated) -->
-    <item quantity="one">1 時間</item>
-    <!-- plurals: hours (abbreviated) -->
-    <item quantity="other">%d 時間</item>
-  </plurals>
-  <plurals name="DUt_minutesShort">
-    <!-- plurals: minutes (abbreviated) -->
-    <item quantity="one">1 分</item>
-    <!-- plurals: minutes (abbreviated) -->
-    <item quantity="other">%d 分</item>
-  </plurals>
-  <plurals name="DUt_secondsShort">
-    <!-- plurals: seconds (abbreviated) -->
-    <item quantity="one">1 秒</item>
-    <!-- plurals: seconds (abbreviated) -->
-    <item quantity="other">%d 秒</item>
-  </plurals>
   <plurals name="Ntasks">
     <!-- plurals: tasks -->
     <item quantity="one">タスク 1 件</item>
